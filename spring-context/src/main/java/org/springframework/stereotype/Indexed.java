@@ -80,7 +80,9 @@ import java.lang.annotation.Target;
  * automatically included with the {@code com.example.AdminService} stereotype.
  * If there are more {@code @Indexed} interfaces and/or superclasses in the
  * hierarchy, the class will map to all their stereotypes.
- *
+ * @colloquialism 类似数据库的索引标识；
+ * 	使用@Indexed 这个注解后，会在编译时将此类放在 META-INT/spring.components文件中
+ * 	ComponentScan扫描时，CandidateComponentsIndexLoader 类会加载此文件，从而ComponentScan不再扫描所有文件，从而加快启动速度
  * @author Stephane Nicoll
  * @since 5.0
  */
